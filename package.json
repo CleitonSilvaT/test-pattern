@@ -4,17 +4,17 @@
   "description": "Projeto base para o trabalho de teste pattern.",
   "type": "module",
   "scripts": {
-    "test": "jest",
-    "coverage": "jest --coverage"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.23.2",
+    "jest": "^29.7.0",
     "babel-jest": "^29.7.0",
-    "jest": "^29.7.0"
+    "@babel/preset-env": "^7.23.2"
   },
   "jest": {
     "transform": {
       "^.+\\.js$": "babel-jest"
-    }
+    },
+    "testEnvironment": "node"
   }
 }
